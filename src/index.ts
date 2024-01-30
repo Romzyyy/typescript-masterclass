@@ -81,3 +81,23 @@ function hello(name: string, greeting: string): string {
 }
 
 hello('jhon', 'pagi')
+
+// type any
+let count: any = 30
+
+count = 'three'
+count = false
+count = []
+count = { name: 'jhon' }
+
+// any type in array
+let thought: any[] = ['hello', 20, false, null]
+thought.push({ id: 123 })
+
+// function & any
+function addTogether(value: any): any {
+    return value + value
+}
+
+const firtResult = addTogether('hello')
+const secondResult = addTogether(3)

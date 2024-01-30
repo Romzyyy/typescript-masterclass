@@ -60,3 +60,18 @@ function hello(name, greeting) {
     return `${name}, ${greeting}`;
 }
 hello('jhon', 'pagi');
+// type any
+let count = 30;
+count = 'three';
+count = false;
+count = [];
+count = { name: 'jhon' };
+// any type in array
+let thought = ['hello', 20, false, null];
+thought.push({ id: 123 });
+// function & any
+function addTogether(value) {
+    return value + value;
+}
+const firtResult = addTogether('hello');
+const secondResult = addTogether(3);
