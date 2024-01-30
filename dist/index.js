@@ -75,3 +75,20 @@ function addTogether(value) {
 }
 const firtResult = addTogether('hello');
 const secondResult = addTogether(3);
+// tuples
+let personTuple = ['mario', 20, true];
+let hsla = [20, 'jhon', 'mario', 30];
+let xy;
+xy = [20, 30];
+function useCord() {
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
+}
+const [lat, long] = useCord();
+// named tuples
+let users;
+users = ['peach', 25];
+console.log(users);
+let userss = [];
+userss = ['peach', true, 'banana', 20];

@@ -101,3 +101,29 @@ function addTogether(value: any): any {
 
 const firtResult = addTogether('hello')
 const secondResult = addTogether(3)
+
+// tuples
+let personTuple: [string, number, boolean] = ['mario', 20, true]
+
+let hsla: [number, string, string, number] = [20, 'jhon', 'mario', 30]
+
+let xy: [number, number]
+xy = [20, 30]
+
+function useCord(): [number, number] {
+    const lat = 100
+    const long = 50
+
+    return [lat, long]
+}
+
+const [lat, long] = useCord()
+
+// named tuples
+let users: [name: string, age: number]
+
+users = ['peach', 25]
+console.log(users)
+
+let userss: (string | number | boolean)[] = []
+userss = ['peach', true, 'banana', 20]
