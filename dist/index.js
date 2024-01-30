@@ -92,3 +92,22 @@ users = ['peach', 25];
 console.log(users);
 let userss = [];
 userss = ['peach', true, 'banana', 20];
+const firstAuthor = {
+    name: 'mario',
+    avatar: 'mario.png',
+};
+const newPost = {
+    title: 'my first post',
+    body: 'curent page',
+    tags: ['gaming', 'tech'],
+    created_at: new Date(),
+    author: firstAuthor,
+};
+function createdPost(post) {
+    console.log(`Created post ${post.title} by ${post.author.name}`);
+}
+createdPost(newPost);
+// interface in array
+let post = [];
+post.push(newPost);
+console.log(post);

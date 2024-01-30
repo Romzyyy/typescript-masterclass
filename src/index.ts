@@ -127,3 +127,41 @@ console.log(users)
 
 let userss: (string | number | boolean)[] = []
 userss = ['peach', true, 'banana', 20]
+
+// interface
+interface Author {
+    name: string
+    avatar: string
+}
+
+const firstAuthor: Author = {
+    name: 'mario',
+    avatar: 'mario.png',
+}
+
+interface Post {
+    title: string
+    body: string
+    tags: string[]
+    created_at: Date
+    author: Author
+}
+
+const newPost: Post = {
+    title: 'my first post',
+    body: 'curent page',
+    tags: ['gaming', 'tech'],
+    created_at: new Date(),
+    author: firstAuthor,
+}
+
+function createdPost(post: Post): void {
+    console.log(`Created post ${post.title} by ${post.author.name}`)
+}
+
+createdPost(newPost)
+
+// interface in array
+let post: Post[] = []
+post.push(newPost)
+console.log(post)
