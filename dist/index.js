@@ -41,3 +41,22 @@ let person = {
 person.name = 'luigi';
 person.scrore = 10;
 const scrore = person.scrore;
+// function
+function addTwoNumber(a, b) {
+    return a + b;
+}
+const substrac = (a, b) => {
+    return a - b;
+};
+addTwoNumber(3, 7);
+substrac(10, 5);
+function addAllNumber(items) {
+    const total = items.reduce((a, c) => a + c, 0);
+    console.log(total);
+}
+addAllNumber([12, 32, 12, 112]);
+// function inference
+function hello(name, greeting) {
+    return `${name}, ${greeting}`;
+}
+hello('jhon', 'pagi');

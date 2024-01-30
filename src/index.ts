@@ -55,3 +55,29 @@ person.name = 'luigi'
 person.scrore = 10
 
 const scrore = person.scrore
+
+// function
+function addTwoNumber(a: number, b: number): number {
+    return a + b
+}
+
+const substrac = (a: number, b: number): number => {
+    return a - b
+}
+
+addTwoNumber(3, 7)
+substrac(10, 5)
+
+function addAllNumber(items: number[]): void {
+    const total = items.reduce((a, c) => a + c, 0)
+    console.log(total)
+}
+
+addAllNumber([12, 32, 12, 112])
+
+// function inference
+function hello(name: string, greeting: string): string {
+    return `${name}, ${greeting}`
+}
+
+hello('jhon', 'pagi')
