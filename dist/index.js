@@ -111,3 +111,18 @@ createdPost(newPost);
 let post = [];
 post.push(newPost);
 console.log(post);
+function getRondomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return [r, g, b];
+}
+const colorOne = getRondomColor();
+const colorTwo = getRondomColor();
+console.log(colorOne, colorTwo);
+const userOne = { name: 'mario', age: 20 };
+function formatUser(user) {
+    console.log(`${user.name} have old ${user.age}`);
+}
+formatUser(userOne);
+formatUser({ name: 'jhon', age: 30 });

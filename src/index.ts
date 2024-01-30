@@ -165,3 +165,33 @@ createdPost(newPost)
 let post: Post[] = []
 post.push(newPost)
 console.log(post)
+
+// type aliases
+type Rgb = [number, number, number]
+
+function getRondomColor(): Rgb {
+    const r = Math.floor(Math.random() * 255)
+    const g = Math.floor(Math.random() * 255)
+    const b = Math.floor(Math.random() * 255)
+
+    return [r, g, b]
+}
+
+const colorOne = getRondomColor()
+const colorTwo = getRondomColor()
+console.log(colorOne, colorTwo)
+
+// objet literal
+type User = {
+    name: string
+    age: number
+}
+
+const userOne: User = { name: 'mario', age: 20 }
+
+function formatUser(user: User): void {
+    console.log(`${user.name} have old ${user.age}`)
+}
+
+formatUser(userOne)
+formatUser({ name: 'jhon', age: 30 })
