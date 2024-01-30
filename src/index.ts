@@ -195,3 +195,32 @@ function formatUser(user: User): void {
 
 formatUser(userOne)
 formatUser({ name: 'jhon', age: 30 })
+
+// union type
+let someId: number | string
+
+someId = 1
+someId = 'two'
+
+let email: string | null = null
+
+email = 'mario@gamil.com'
+email = null
+
+type Id = number | string
+
+let anotherId: Id
+
+anotherId = 'akl3j3la3ij43rli3'
+anotherId = 2
+
+// union type pitfall
+function swapId(id: Id): Id {
+    // can only use props and methods common to
+    // both number and string types
+    // parseInt(id) --> not allowed
+    // parseInt(id)
+    return id
+}
+
+swapId(5)
