@@ -145,3 +145,23 @@ function swapId(id) {
     return id;
 }
 swapId(5);
+// type guards
+function swapIdType(id) {
+    if (typeof id === 'string') {
+        return parseInt(id);
+    }
+    else {
+        return id.toString();
+    }
+}
+const idOne = swapIdType(3);
+const idTwo = swapIdType('1');
+console.log(idOne, idTwo);
+function logDetails(value) {
+    if (value.type === 'user') {
+        console.log(value.username, value.email);
+    }
+    else if (value.type === 'person') {
+        console.log(value.firstName, value.age);
+    }
+}
